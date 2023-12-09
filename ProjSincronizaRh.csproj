@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD2AE930-679E-4264-877B-A3C1D787530A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjSincronizaRh</RootNamespace>
+    <AssemblyName>ProjSincronizaRh</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bd_SincronizaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bd_SincronizaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bd_SincronizaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bd_SincronizaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bd_SincronizaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bd_SincronizaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bd_SincronizaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bd_SincronizaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bd_SincronizaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bd_SincronizaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View\CadastroFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastroFunc.Designer.cs">
+      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFuncionarioRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmFuncionarioRelatorio.Designer.cs">
+      <DependentUpon>frmFuncionarioRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaginaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PaginaInicial.Designer.cs">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Relatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios.Designer.cs">
+      <DependentUpon>Relatorios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\CadastroFunc.resx">
+      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmFuncionarioRelatorio.resx">
+      <DependentUpon>frmFuncionarioRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios.resx">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaginaInicial.resx">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\RelatorioFunc1.rdlc" />
+    <EmbeddedResource Include="View\Relatorios.resx">
+      <DependentUpon>Relatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Bd_SincronizaDataSet.xsc">
+      <DependentUpon>Bd_SincronizaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bd_SincronizaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bd_SincronizaDataSet.xss">
+      <DependentUpon>Bd_SincronizaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet1.xsc">
+      <DependentUpon>Bd_SincronizaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bd_SincronizaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bd_SincronizaDataSet1.xss">
+      <DependentUpon>Bd_SincronizaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet2.xsc">
+      <DependentUpon>Bd_SincronizaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bd_SincronizaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bd_SincronizaDataSet2.xss">
+      <DependentUpon>Bd_SincronizaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet3.xsc">
+      <DependentUpon>Bd_SincronizaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bd_SincronizaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bd_SincronizaDataSet3.xss">
+      <DependentUpon>Bd_SincronizaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet4.xsc">
+      <DependentUpon>Bd_SincronizaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Bd_SincronizaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bd_SincronizaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bd_SincronizaDataSet4.xss">
+      <DependentUpon>Bd_SincronizaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\884472a3-483a-4491-ab66-c73aa78ee3b8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\925890_account_add_create_new_profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2703079_close_delete_exit_x_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7135416_minimaze_size_direction_resize_expand_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2aa2bad4-fd31-4764-8edf-151c900570bb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-24 221737.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3162629_close_delete_exit_remove_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-25 172231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreen_exit_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134226_back_arrow_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216242_home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4781838_cancel_close_delete_exit_logout_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8666542_save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216242_home_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\622400_pen_pencil_edit_write_writing_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4781838_cancel_close_delete_exit_logout_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643729_bin_delete_garbage_rubbish_trash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134226_back_arrow_left_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-25 172244.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2023-10-25 165129.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8666542_save_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643729_bin_delete_garbage_rubbish_trash_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4781838_cancel_close_delete_exit_logout_icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115237_add_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1891033_add_append_blue_cercle_create_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643729_bin_delete_garbage_rubbish_trash_icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_FILL0_wght400_GRAD0_opsz24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402443_search_find_magnifier_magnifying_magnifying glass_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2931184_normal_regular_zoom_glass_magnifier_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9034390_magnifying_glass_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2aa2bad4-fd31-4764-8edf-151c900570bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\884472a3-483a-4491-ab66-c73aa78ee3b8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216242_home_icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216242_home_icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\314689_search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849806_printer_copy_print_multimedia_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849806_printer_copy_print_multimedia_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643729_bin_delete_garbage_rubbish_trash_icon3.png" />
+    <None Include="Resources\2849806_printer_copy_print_multimedia_icon2.png" />
+    <None Include="Resources\Captura de tela 2023-10-24 2217371.png" />
+    <None Include="Resources\2849806_printer_copy_print_multimedia_icon3.png" />
+    <None Include="Resources\2849806_printer_copy_print_multimedia_icon4.png" />
+    <None Include="Resources\Captura de tela 2023-10-24 2217372.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
